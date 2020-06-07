@@ -40,9 +40,9 @@ public class RingBuffer {
 				index = 0;
 			
 			storeSize += 1;
-			//notify();
+			
 		}
-		
+		//notify();
 	}
 	
 	public synchronized int get() throws InterruptedException{
@@ -62,12 +62,10 @@ public class RingBuffer {
 			if(front ==  bufSize)
 				front = 0;
 			
-			
-			System.out.println("get " + result);
+			System.out.println("	get " + result);
 		}
 		
 		//notify();
 		return result;
-		
 	}
 }
